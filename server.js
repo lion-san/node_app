@@ -1,3 +1,5 @@
+/// <reference path="typings/node/node.d.ts" />
+
 var http = require("http");
 
 function onRequest(request, response) {
@@ -6,6 +8,4 @@ function onRequest(request, response) {
   response.end();
 }
 
-http.createServer(onRequest).listen(8888);
-
-
+http.createServer(onRequest).listen(process.env.PORT);
